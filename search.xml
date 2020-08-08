@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>mytest</title>
+      <link href="/2020/08/08/mytest/"/>
+      <url>/2020/08/08/mytest/</url>
+      
+        <content type="html"><![CDATA[<p>该文章参考了实验室师兄写的教程，并记录了自己在实操过程中的坑。</p><h1 id="内网机器配置"><a href="#内网机器配置" class="headerlink" title="内网机器配置"></a>内网机器配置</h1><p>假设现在有一台公用服务器和一台内网服务器，现在想通过反向代理的方式来访问内网服务器。假设公用服务器为A，内网服务器为B。现在将B服务器的22端口绑定到公网服务器A的某一端口P<sub>A</sub>上，那么请求公网的P<sub>A</sub>时，公网服务器就会把请求转发到内网服务器上端口22上。</p><h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p>由于SSH在一段时间没有数据包之后会断开，所以最好直接使用autossh来配置反向代理。<br>（以下操作均在内网进行，而且我采用的是在root账户进行操作）</p><ol><li>首先是安装autossh：我在服务器上重装的是Ubuntu18.04，可用以下命令进行安装</li></ol><blockquote><p><strong>apt-get install autossh</strong></p></blockquote><ol start="2"><li><p>然后添加我们的内网机器的ssh-key到公网以实现自动登陆：**ssh-copy-id &lt;公网机器A的登陆用户名&gt;@&lt;公网机器的ip地址&gt;**。</p><blockquote><p>注意这里的公网机器A的用户名最好不要用root账户来做转发请求，我尝试root账户后发现不能正常反向代理。</p></blockquote></li><li><p>对2的补充，如果本机并没有ssh的key，需要先执行ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#114;&#95;&#x65;&#109;&#x61;&#x69;&#108;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#99;&#111;&#109;">&#x79;&#111;&#117;&#114;&#95;&#x65;&#109;&#x61;&#x69;&#108;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#99;&#111;&#109;</a>“再进行第二步。</p></li><li><p>利用autossh搭建反向隧道：</p><blockquote><p>autossh -M 55555  -fCNR 2061:localhost:22 &lt;公网机器A的ssh登录用户名&gt;@&lt;公网机器A的IP&gt;</p></blockquote><p> 参数介绍：</p><blockquote><p>-f 后台执行ssh指令<br>  -C 允许压缩数据<br>  -N 不执行远程指令<br>  -R 将远程主机（服务器）的某个端口转发到本地机器的指定端口<br>  -L 将本地机器（客户机）的某个端口转发到远端指定机器的指定端口<br>  -p 指定远程主机的端口<br>  -M 添加一个端口用于<strong>心跳包</strong>的发送，该端口只要是服务器上一个可用的未被占用的端口就行。</p></blockquote><p> 上述例子就是将本地机器的22端口绑定到公网服务器的2061端口</p></li><li><p>设置开机自启动，不然每次开机后都要重新配置一下。<br> 5.1 对于Ubuntu16系统，只需要将上述autossh命令加入到 /etc/rc.local就行。</p><blockquote><p>vim /etc/rc.local</p></blockquote><p> 将<b>autossh -M 55555  -fCNR 2061:localhost:22 &lt;公网机器A的ssh登录用户名&gt;@&lt;公网机器A的IP&gt;</b>命令加入到exit 0 之前就行。</p><p> 5.2 对于我自己重装的Ubuntu18系统来说，系统并没有这个文件。在网上搜索的结果是Ubuntu18之后采用了新的管理开机自启动的方式。具体自行百度。<br> 具体可参考这边知乎文章。<br> <a href="https://zhuanlan.zhihu.com/p/63507762">Ubuntu18开机启动脚本</a></p></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/08/07/hello-world/"/>
       <url>/2020/08/07/hello-world/</url>
