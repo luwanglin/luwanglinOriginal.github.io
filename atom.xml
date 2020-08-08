@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>fight</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://luwanglin.gitee.io/"/>
+  <updated>2020-08-07T06:40:25.924Z</updated>
+  <id>https://luwanglin.gitee.io/</id>
+  
+  <author>
+    <name>luwanglin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://luwanglin.gitee.io/2020/08/07/hello-world/"/>
+    <id>https://luwanglin.gitee.io/2020/08/07/hello-world/</id>
+    <published>2020-08-07T06:40:25.923Z</published>
+    <updated>2020-08-07T06:40:25.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
