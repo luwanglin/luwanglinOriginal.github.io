@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="反向代理, lucky">
+    <meta name="keywords" content="boostrap栅格系统自适应的布局, lucky">
     <meta name="description" content="最美的不是下雨天，点击左下角来听听我的歌单吧！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>反向代理 | lucky</title>
+    <title>boostrap栅格系统自适应的布局 | lucky</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">反向代理</h1>
+                    <h1 class="description center-align post-title">boostrap栅格系统自适应的布局</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
+                            <a href="/tags/%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">栅格系统</span>
                             </a>
                         
-                            <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-                                <span class="chip bg-color">反向代理</span>
+                            <a href="/tags/%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/">
+                                <span class="chip bg-color">混合布局</span>
                             </a>
                         
                     </div>
@@ -450,8 +450,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
-                                深度学习环境配置
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/Bootstrap/" class="post-category">
+                                Bootstrap
                             </a>
                         
                     </div>
@@ -463,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-08
+                    2020-08-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-12
+                    2020-08-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    708
+                    922
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -499,40 +503,79 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>该文章参考了实验室师兄写的教程，并记录了自己在实操过程中的坑。</p>
-<h1 id="1、内网机器配置"><a href="#1、内网机器配置" class="headerlink" title="1、内网机器配置"></a>1、内网机器配置</h1><p>假设现在有一台公用服务器和一台内网服务器，现在想通过反向代理的方式来访问内网服务器。假设公用服务器为A，内网服务器为B。现在将B服务器的22端口绑定到公网服务器A的某一端口P<sub>A</sub>上，那么请求公网的P<sub>A</sub>时，公网服务器就会把请求转发到内网服务器上端口22上。</p>
-<h1 id="2、反向代理"><a href="#2、反向代理" class="headerlink" title="2、反向代理"></a>2、反向代理</h1><p>由于SSH在一段时间没有数据包之后会断开，所以最好直接使用autossh来配置反向代理。<br>（以下操作均在内网进行，而且我采用的是在root账户进行操作）</p>
+                <h1 id="1-栅格系统"><a href="#1-栅格系统" class="headerlink" title="1.栅格系统"></a>1.栅格系统</h1><p>​        Bootstrap是基于移动优先的原则开发的，使用了一系列的媒体查询（media queries）方法，为我们的布局和界面创建自适应的的分界点。这些分界点主要是基于视口宽度的最小值，并且当窗口视图改变的时候允许元素缩放。</p>
+<p>(分界点大小：576px、768px、992px、1200px)</p>
+<p>Bootstrap包含了一个强大的移动优先的网格系统，它是基于一个12列的布局、有5种响应尺寸(对应不同的屏幕)。Bootstrap4是完全基于flexbox流式布局构建的，完全支持响应式标准。</p>
+<h1 id="2-响应式的class选择器"><a href="#2-响应式的class选择器" class="headerlink" title="2.响应式的class选择器"></a>2.响应式的class选择器</h1><p>​        Bootstrap的栅格系统包括五种宽带预定义，用于构建复杂的响应布局，你可以根据需要定义在特小<code>.col</code>、小<code>.col-sm-*</code>、中<code>.col-md-*</code>、大<code>.col-lg-*</code>、特大<code>.col-xl-*</code>五种屏幕(设备)下的样式。</p>
+<p>​        每个标签都是定义了在当前断点之下的排列样式，一旦小于这个断点那么样式就不起作用了，变成了各独自占一行。</p>
+<p><img src="https://gitee.com/LuWangLin/picBed_new/raw/master/img/image-20200816203236210.png" alt="image-20200816203236210"></p>
+<p>类似于sm,md,lg,xl等都是断点，只有当屏幕尺寸大于断点的对应的大小，这样的的class样式才会生效。比如：</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;!-- &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;
+          integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;style&gt;
+        #box_row div &amp;#123;
+            line-height: 100px;
+            text-align: center
+        &amp;#125;
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div id=&quot;box_row&quot; class=&quot;row&quot; style=&quot;height: 100px&quot;&gt;
+        &lt;div class=&quot;col-xl-4&quot; style=&quot;background: #27ff86&quot;&gt;
+            222
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xl-4 &quot; style=&quot;background: #8879ff&quot;&gt;
+            222
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xl-4&quot; style=&quot;background: #ffc535&quot;&gt;
+            other
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<p>这里设置了边框，这里其实设置的在超大屏幕下的样式，即当前屏幕的尺寸宽度大于1140px时这个样式才生效，如下：</p>
+<p><img src="https://i.loli.net/2020/08/16/lyQTtJx1GEZ9YLu.png"></p>
+<p>但是当屏幕的尺寸变小之后，比如缩小到1140px之后，就会自动成为每列一行、水平堆砌。</p>
+<p>比如把浏览器窗口的宽度调小到1140px以下，此时显示的效果如下：</p>
+<p><img src="https://i.loli.net/2020/08/15/WQK15GClPzsJXEu.png" alt="image.png"></p>
+<p>会自适应的进行布局，这是根据当前屏幕尺寸进行自动的调整的也就是说，当屏幕尺寸小于端点值xl时，此时每列就会自动的占一行，水平堆砌。</p>
+<h1 id="3-混合布局"><a href="#3-混合布局" class="headerlink" title="3.混合布局"></a>3.混合布局</h1><pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div id=&quot;box_row&quot; class=&quot;row&quot; style=&quot;height: 100px&quot;&gt;
+        &lt;div class=&quot;col-xl-4 col-sm-3&quot; style=&quot;background: #27ff86&quot;&gt;
+            222
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xl-4 col-sm-3&quot; style=&quot;background: #8879ff&quot;&gt;
+            222
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xl-4 col-sm-3&quot; style=&quot;background: #ffc535&quot;&gt;
+            other
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>这样就设置了两个断点，在超大屏幕下每块占4列，在大屏幕和小屏幕之间是占3列，以下是效果展示图：</p>
 <ol>
-<li><p>首先是安装autossh：我在服务器上重装的是Ubuntu18.04，可用以下命令进行安装</p>
-<blockquote>
-<p><strong>apt-get install autossh</strong></p>
-</blockquote>
+<li><p>当屏幕尺寸大于1140px时，<code>col-xl-4</code>生效：</p>
+<p><img src="https://i.loli.net/2020/08/16/lyQTtJx1GEZ9YLu.png"></p>
 </li>
-<li><p>然后添加我们的内网机器的ssh-key到公网以实现自动登陆：**ssh-copy-id &lt;公网机器A的登陆用户名&gt;@&lt;公网机器的ip地址&gt;**。</p>
-<blockquote>
-<p>注意这里的公网机器A的用户名最好不要用root账户来做转发请求，我尝试root账户后发现不能正常反向代理。</p>
-</blockquote>
+<li><p>当屏幕尺寸小于1140px，大于576px时：</p>
+<p><img src="https://gitee.com/LuWangLin/picBed_new/raw/master/img/image-20200816111300036.png" alt="image-20200816111300036"></p>
+<p>可以看到此时的布局调整到了<code>col-sm-3</code>下的自适应样式，即每个块占3列</p>
 </li>
-<li><p>对2的补充，如果本机并没有ssh的key，需要先执行ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#114;&#x5f;&#x65;&#109;&#x61;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#111;&#117;&#114;&#x5f;&#x65;&#109;&#x61;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“再进行第二步。</p>
-</li>
-<li><p>利用autossh搭建反向隧道：</p>
-<blockquote>
-<p>autossh -M 55555  -fCNR 2061:localhost:22 &lt;公网机器A的ssh登录用户名&gt;@&lt;公网机器A的IP&gt;</p>
-</blockquote>
-</li>
-<li><p>参数介绍：</p>
-<blockquote>
-<p>​     -f 后台执行ssh指令<br> ​    -C 允许压缩数据<br> ​    -N 不执行远程指令<br> ​    -R 将远程主机（服务器）的某个端口转发到本地机器的指定端口<br> ​    -L 将本地机器（客户机）的某个端口转发到远端指定机器的指定端口<br> ​    -p 指定远程主机的端口<br> ​    -M 添加一个端口用于<strong>心跳包</strong>的发送，该端口只要是服务器上一个可用的未被占用的端口就行。/3、</p>
-</blockquote>
+<li><p>混合布局情况下可以对多种设备进行布局调整。</p>
 </li>
 </ol>
-<h1 id="3、设置开机自启动"><a href="#3、设置开机自启动" class="headerlink" title="3、设置开机自启动"></a>3、设置开机自启动</h1><h2 id="3-1-对于Ubuntu16系统"><a href="#3-1-对于Ubuntu16系统" class="headerlink" title="3.1 对于Ubuntu16系统"></a>3.1 对于Ubuntu16系统</h2><p>只需要将上述autossh命令加入到 /etc/rc.local就行。</p>
-<blockquote>
-<p>vim /etc/rc.local</p>
-</blockquote>
-<p>将<b>autossh -M 55555  -fCNR 2061:localhost:22 &lt;公网机器A的ssh登录用户名&gt;@&lt;公网机器A的IP&gt;</b>命令加入到exit 0 之前就行。</p>
-<h2 id="3-2-对于我自己重装的Ubuntu18系统来说"><a href="#3-2-对于我自己重装的Ubuntu18系统来说" class="headerlink" title="3.2 对于我自己重装的Ubuntu18系统来说"></a>3.2 对于我自己重装的Ubuntu18系统来说</h2><p>系统并没有这个文件。</p>
-<p>在网上搜索的结果是Ubuntu18之后采用了新的管理开机自启动的方式。具体自行百度。<br>具体可参考这边知乎文章。<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/63507762">Ubuntu18开机启动脚本</a></p>
 
             </div>
             <hr/>
@@ -558,7 +601,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://luwanglin.gitee.io/2020/08/08/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">https://luwanglin.gitee.io/2020/08/08/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</a>
+                    <a href="https://luwanglin.gitee.io/2020/08/16/boostrap%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E5%B8%83%E5%B1%80/">https://luwanglin.gitee.io/2020/08/16/boostrap%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E5%B8%83%E5%B1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -596,12 +639,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
+                                <a href="/tags/%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">栅格系统</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-                                    <span class="chip bg-color">反向代理</span>
+                                <a href="/tags/%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/">
+                                    <span class="chip bg-color">混合布局</span>
                                 </a>
                             
                         </div>
@@ -1036,35 +1079,35 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/12/vue%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8A%A5%E9%94%99node-sass%E6%8A%A5%E9%94%99/">
+                <a href="/2020/08/16/%E5%B7%A5%E5%85%B7-Typora%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="vue项目启动时node_sass报错">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="工具-Typora常用语法">
                         
-                        <span class="card-title">vue项目启动时node_sass报错</span>
+                        <span class="card-title">工具-Typora常用语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、关于vue启动项目时报错报错代码如下:
-npm run dev
+                            工具-Typora常用语法
+Markdown（MD）作为目前互联网写作相当流行的一种文档撰写语言格式，深受互联网编辑者的喜爱，由此周边一些基于MD的编辑工具也随之油然而生。
+作为一款免费的MD编辑器：
 
-&gt; hello-vue@1.0.0 dev F:\IDEA\Vue\vue_project\hello-vue
-&gt; webpack-dev-server --
+Typora极简、跨平台、且十分直观
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-16
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/typora/" class="post-category">
+                                    typora
                                 </a>
                             
                             
@@ -1074,12 +1117,8 @@ npm run dev
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">Markdown语法笔记</span>
                     </a>
                     
                 </div>
@@ -1090,51 +1129,56 @@ npm run dev
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/08/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+                <a href="/2020/08/13/hexo%E6%B7%BB%E5%8A%A0live2d-%E8%AE%A9%E4%BD%A0%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%88%B1%E7%9A%84girlfriend/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="反向代理">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="hexo添加live2d,让你获得一个可爱的girlfriend">
                         
-                        <span class="card-title">反向代理</span>
+                        <span class="card-title">hexo添加live2d,让你获得一个可爱的girlfriend</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            该文章参考了实验室师兄写的教程，并记录了自己在实操过程中的坑。
-1、内网机器配置假设现在有一台公用服务器和一台内网服务器，现在想通过反向代理的方式来访问内网服务器。假设公用服务器为A，内网服务器为B。现在将B服务器的22端口绑定到公网服务器
+                            1.安装必备环境假定你已经有了hexo的一些环境，比如npm，node等
+我的个人环境如下：
+$ node -v
+v12.18.3
+$ npm -v
+6.14.6
+本人博客的主题为：
+
+hexo-theme-matery
+
+2.安装模块
+首
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    深度学习环境配置
+                            <a href="/categories/hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    hexo博客配置
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-                        <span class="chip bg-color">反向代理</span>
+                    <a href="/tags/live2D/">
+                        <span class="chip bg-color">live2D</span>
                     </a>
                     
                 </div>
