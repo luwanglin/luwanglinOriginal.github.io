@@ -509,7 +509,7 @@
 PubkeyAuthentication yes # 可以使用 ssh 公钥许可
 AuthorizedKeysFile  .ssh/authorized_keys # 公钥信息保存到该文件中</code></pre>
 <p>​    我的配置文件<code>AuthorizedKeysFile  .ssh/authorized_keys</code>这一行有点不同，是这样的</p>
-<pre><code>&gt; AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2</code></pre>
+<pre><code class="shell"> AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2</code></pre>
 <p><strong>重启sshd</strong> <code>/etc/init.d/ssh restart</code>使得这些配置生效。<br><strong>添加你的机器的公钥到容器</strong> 这一步是为了能免密码ssh登录到容器中。</p>
 <ol>
 <li>在容器中<code>mkdir ~/.ssh</code></li>
@@ -526,15 +526,21 @@ AuthorizedKeysFile  .ssh/authorized_keys # 公钥信息保存到该文件中</co
 <p>如果想要运行GPU环境的话，那么必须在启动容器时加上<code>--runtime=nvidia</code>,那么此时的命令为：</p>
 <p><code>docker run --runtime=nvidia -it -p 12622:22 -v ~/data:/data -v ~/config:/config deepo-ssh:1.0 /bin/bash &amp;&amp; /usr/sbin/sshd -D</code></p>
 <ul>
-<li>-d | 后台运行</li>
-<li>-p 12622:22 | 绑定当前mac的12622端口到deepo-ssh容器的22端口（ssh服务默认为22端口）</li>
-<li>-v <del>/data:/data | 将本机上的</del>/data目录挂载到容器/data目录</li>
-<li>/usr/sbin/sshd -D | 容器运行的命令和参数，开启ssh服务 </li>
+<li><p>-d | 后台运行</p>
+</li>
+<li><p>-p 12622:22 | 绑定当前mac的12622端口到deepo-ssh容器的22端口（ssh服务默认为22端口）</p>
+</li>
+<li><blockquote>
+<p> -v <del>/data:/data | 将本机上的</del>/data目录挂载到容器/data目录</p>
+</blockquote>
+</li>
+<li><p>/usr/sbin/sshd -D | 容器运行的命令和参数，开启ssh服务 </p>
+</li>
 </ul>
 <p>这样就可以通过<code>ssh -p 12622 root@localhost</code>连接到容器，可以进入python解释程序，执行<code>import torch</code>等命令查看机器学习框架是否能正常使用。在<code>exit</code>退出ssh连接后，容器仍运行在后台。</p>
 <h2 id="ssh远程连接"><a href="#ssh远程连接" class="headerlink" title="ssh远程连接"></a>ssh远程连接</h2><p>首先明确的是容器中的22端口已经绑定到主机上的12622端口，那么此时如果想要远程连接的话那么应该采用如下命令：</p>
 <pre><code class="shell">ssh -p 12622 root@&lt;你的主机的ip地址&gt;</code></pre>
-<p>这里有个坑注意。如果你的服务器主机是内网的，要想正确访问的话，那么必须首先搭建隧道。可以参考我之前的博客文章，</p>
+<p>这里有个坑注意。如果你的服务器主机是内网的，要想正确访问的话，那么必须首先搭建隧道。可以参考我之前的博客文章，<a href="https://luwanglin.gitee.io/2020/08/08/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">反向代理搭建隧道</a></p>
 <ol>
 <li>其中这里的坑就是<code>我用autossh搭建隧道不起作用，无法远程登录进行容器里面，但是使用ssh搭建的就可以正确访问</code></li>
 </ol>
