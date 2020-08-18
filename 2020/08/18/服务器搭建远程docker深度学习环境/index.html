@@ -530,9 +530,7 @@ AuthorizedKeysFile  .ssh/authorized_keys # 公钥信息保存到该文件中</co
 </li>
 <li><p>-p 12622:22 | 绑定当前mac的12622端口到deepo-ssh容器的22端口（ssh服务默认为22端口）</p>
 </li>
-<li><blockquote>
-<p> -v <del>/data:/data | 将本机上的</del>/data目录挂载到容器/data目录</p>
-</blockquote>
+<li><pre><code class="shell"> -v ~/data:/data | 将本机上的~/data目录挂载到容器/data目录</code></pre>
 </li>
 <li><p>/usr/sbin/sshd -D | 容器运行的命令和参数，开启ssh服务 </p>
 </li>
