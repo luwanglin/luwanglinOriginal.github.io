@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo添加live2d,让你获得一个可爱的girlfriend, lucky">
+    <meta name="keywords" content="服务器搭建远程docker深度学习环境, lucky">
     <meta name="description" content="最美的不是下雨天，点击左下角来听听我的歌单吧！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo添加live2d,让你获得一个可爱的girlfriend | lucky</title>
+    <title>服务器搭建远程docker深度学习环境 | lucky</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo添加live2d,让你获得一个可爱的girlfriend</h1>
+                    <h1 class="description center-align post-title">服务器搭建远程docker深度学习环境</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/live2D/">
-                                <span class="chip bg-color">live2D</span>
+                            <a href="/tags/docker/">
+                                <span class="chip bg-color">docker</span>
+                            </a>
+                        
+                            <a href="/tags/pycharm/">
+                                <span class="chip bg-color">pycharm</span>
                             </a>
                         
                     </div>
@@ -446,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/" class="post-category">
-                                hexo博客配置
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                深度学习环境配置
                             </a>
                         
                     </div>
@@ -459,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-13
+                    2020-08-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-13
+                    2020-08-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    721
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -495,118 +499,90 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-安装必备环境"><a href="#1-安装必备环境" class="headerlink" title="1.安装必备环境"></a>1.安装必备环境</h2><p>假定你已经有了hexo的一些环境，比如npm，node等</p>
-<p>我的个人环境如下：</p>
-<pre><code class="shell">$ node -v
-v12.18.3
-$ npm -v
-6.14.6</code></pre>
-<p>本人博客的主题为：</p>
-<blockquote>
-<p>hexo-theme-matery</p>
-</blockquote>
-<h2 id="2-安装模块"><a href="#2-安装模块" class="headerlink" title="2.安装模块"></a>2.安装模块</h2><ol>
-<li><p>首先进入博客的主目录下</p>
-</li>
-<li><p>执行以下命令进行安装live2D模块</p>
-<pre><code class="shell">npm install --save hexo-helper-live2d</code></pre>
-</li>
-<li><p>这样进行安装后，我并没有进行相关的配置直接就可以在博客中看到可爱的动漫人物了</p>
-<p>默认的人物是：</p>
-<blockquote>
-<p>shizuku</p>
-</blockquote>
-</li>
+                <h1 id="服务器搭建远程docker深度学习环境"><a href="#服务器搭建远程docker深度学习环境" class="headerlink" title="服务器搭建远程docker深度学习环境"></a>服务器搭建远程docker深度学习环境</h1><p>本文大部分内容参考知乎文章</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/63426143">Docker+PyCharm快速搭建机器学习开发环境</a></p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>  Docker是一种容器技术，类似于虚拟机，但比虚拟机更轻便。Docker容器内的应用程序直接运行于宿主的内核，而没有自己的内核，而且也没有硬件虚拟。更多Docker的相关知识可以看《Docker-从入门到实践》。</p>
+<h2 id="Deepo"><a href="#Deepo" class="headerlink" title="Deepo"></a>Deepo</h2><p><a href="https://link.zhihu.com/?target=https://github.com/ufoym/deepo">Deepo</a>是一个包含一系列Docker镜像的项目，这些镜像中包含了TensorFlow、Caffe和Torch等多种深度学习框架。也就是说，在这些镜像中已经包含了大部分流行的机器学习框架，只需要将镜像下载到本地，运行容器即可直接使用这些框架。<br>  Deepo提供了GPU和CPU版本的框架，这里使用的mac以CPU的镜像为例子，对于GPU版本的镜像需要先安装Nvidia官方的nividia-docker和相应版本的NVIDIA驱动。<br>  在github页面可以看到Deepo拥有众多的不同的镜像，以tag来区分，可以根据需要下载对应的镜像。这里以<code>docker pull ufoym/deepo</code>为例，这样会默认下载包含GPU版本的深度学习框架的镜像。</p>
+<p>如果只想要使用CPU的环境的话可以在后面加上CPU，即<code>docker pull ufoym/deepo:cpu</code></p>
+<h2 id="Deepo-ssh镜像"><a href="#Deepo-ssh镜像" class="headerlink" title="Deepo-ssh镜像"></a>Deepo-ssh镜像</h2><p>  在有了Deepo镜像之后，为了方便使用，可以在Deepo镜像基础上配置ssh服务，以便于mac通过ssh连接登录到容器，以及PyCharm调用远程的python的interpreter。<br>  登录到现有的Deepo容器，以<code>docker run -it ufoym/deepo:cpu bash</code>交互式的进入deepo容器中。<br><strong>配置容器ssh连接</strong>  这一步可以使用mac通过ssh连接ubuntu容器。首先通过<code>apt-get install openssh-server</code>用于开启ssh服务的外部连接。<br><strong>配置sshd</strong> 修改sshd的默认配置，编辑文件<code>/etc/ssh/sshd_config</code>，修改文件中的以下三行：</p>
+<pre><code class="shell">PermitRootLogin yes # 可以登录 root 用户
+PubkeyAuthentication yes # 可以使用 ssh 公钥许可
+AuthorizedKeysFile  .ssh/authorized_keys # 公钥信息保存到该文件中</code></pre>
+<p>​    我的配置文件<code>AuthorizedKeysFile  .ssh/authorized_keys</code>这一行有点不同，是这样的</p>
+<pre><code>&gt; AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2</code></pre>
+<p><strong>重启sshd</strong> <code>/etc/init.d/ssh restart</code>使得这些配置生效。<br><strong>添加你的机器的公钥到容器</strong> 这一步是为了能免密码ssh登录到容器中。</p>
+<ol>
+<li>在容器中<code>mkdir ~/.ssh</code></li>
+<li><code>touch ~/.ssh/authorized_keys</code></li>
+<li>在你自己的机器上新开一个终端窗口，<code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>（替换为你自己的邮箱），会在<code>~/.ssh</code>目录下生成三个文件<code>id_rsa</code>、<code>id_rsa.pub</code>、<code>known_hosts</code>。复制<code>id_rsa.pub</code>文件中的内容。</li>
+<li>将复制的内容粘贴到容器<code>~/.ssh/authorized_keys</code>文件中。</li>
 </ol>
-<h2 id="3-修改默认配置，选择自己喜欢的人物"><a href="#3-修改默认配置，选择自己喜欢的人物" class="headerlink" title="3.修改默认配置，选择自己喜欢的人物"></a>3.修改默认配置，选择自己喜欢的人物</h2><p>   截图预览，参考作者的博客，以下为相关展示</p>
-<h4 id="Epsilon2-1"><a href="#Epsilon2-1" class="headerlink" title="Epsilon2.1"></a>Epsilon2.1</h4><p>   <img src="/images/live2d/Epsilon2.1.gif" alt="img"></p>
-<h4 id="Gantzert-Felixander"><a href="#Gantzert-Felixander" class="headerlink" title="Gantzert_Felixander"></a>Gantzert_Felixander</h4><p>   <img src="/images/live2d/Gantzert_Felixander.gif" alt="img"></p>
-<h4 id="haru"><a href="#haru" class="headerlink" title="haru"></a>haru</h4><p>   <img src="/images/live2d/haru.gif" alt="img"></p>
-<h4 id="miku"><a href="#miku" class="headerlink" title="miku"></a>miku</h4><p>   <img src="/images/live2d/miku.gif"></p>
-<h4 id="ni-j"><a href="#ni-j" class="headerlink" title="ni-j"></a>ni-j</h4><p>   <img src="/images/live2d/ni-j.gif" alt="img"></p>
-<h4 id="nico"><a href="#nico" class="headerlink" title="nico"></a>nico</h4><p>   <img src="/images/live2d/nico.gif" alt="img"></p>
-<h4 id="nietzche"><a href="#nietzche" class="headerlink" title="nietzche"></a>nietzche</h4><p>   <img src="/images/live2d/nietzche.gif" alt="img"></p>
-<h4 id="nipsilon"><a href="#nipsilon" class="headerlink" title="nipsilon"></a>nipsilon</h4><p>   <img src="/images/live2d/nipsilon.gif" alt="img"></p>
-<h4 id="nito"><a href="#nito" class="headerlink" title="nito"></a>nito</h4><p>   <img src="/images/live2d/nito.gif" alt="img"></p>
-<h4 id="shizuku"><a href="#shizuku" class="headerlink" title="shizuku"></a>shizuku</h4><p>   <img src="/images/live2d/shizuku.gif" alt="img"></p>
-<h4 id="tsumiki"><a href="#tsumiki" class="headerlink" title="tsumiki"></a>tsumiki</h4><p>   <img src="/images/live2d/tsumiki.gif" alt="img"></p>
-<h4 id="wanko"><a href="#wanko" class="headerlink" title="wanko"></a>wanko</h4><p>   <img src="/images/live2d/wanko.gif" alt="img"></p>
-<h4 id="z16"><a href="#z16" class="headerlink" title="z16"></a>z16</h4><p>   <img src="/images/live2d/z16.gif" alt="img"></p>
-<h4 id="hibiki"><a href="#hibiki" class="headerlink" title="hibiki"></a>hibiki</h4><p>   <img src="/images/live2d/hibiki.gif" alt="img"></p>
-<h4 id="koharu"><a href="#koharu" class="headerlink" title="koharu"></a>koharu</h4><p>   <img src="/images/live2d/koharu.gif" alt="img"></p>
-<h4 id="haruto"><a href="#haruto" class="headerlink" title="haruto"></a>haruto</h4><p>   <img src="/images/live2d/haruto.gif" alt="img"></p>
-<h4 id="Unitychan"><a href="#Unitychan" class="headerlink" title="Unitychan"></a>Unitychan</h4><p>   <img src="/images/live2d/Unitychan.gif" alt="img"></p>
-<h4 id="tororo"><a href="#tororo" class="headerlink" title="tororo"></a>tororo</h4><p>   <img src="/images/live2d/tororo.gif" alt="img"></p>
-<h4 id="hijiki"><a href="#hijiki" class="headerlink" title="hijiki"></a>hijiki</h4><p>   <img src="/images/live2d/hijiki.gif" alt="img"></p>
-<h2 id="4-安装你自己喜欢的人物对应的模块包"><a href="#4-安装你自己喜欢的人物对应的模块包" class="headerlink" title="4. 安装你自己喜欢的人物对应的模块包"></a>4. 安装你自己喜欢的人物对应的模块包</h2><ol>
-<li><p>模型列表</p>
+<p><strong>提交修改到镜像</strong> 以上对容器的修改并不会改变镜像文件，需要提交修改生成一个新的镜像。</p>
+<ol>
+<li><code>docker ps -a</code>查看刚刚使用deepo容器，记录下该容器的<code>CONTAINER ID</code>，例如<code>8b5a86d18e58</code>。</li>
+<li><code>docker commit -m &#39;add ssh&#39; -a &#39;your-name&#39; 8b5a86d18e58 deepo-ssh</code>这样会将刚刚在deepo容器中配置的ssh服务保存，并生成新的deepo-ssh镜像。在后续使用<code>docker images</code>命令可以查看到新的镜像已经被保存。</li>
+</ol>
+<p><strong>运行最终的容器</strong><br><code>docker run -it -p 12622:22 -v ~/data:/data -v ~/config:/config deepo-ssh:1.0 /bin/bash &amp;&amp; /usr/sbin/sshd -D </code></p>
+<p>如果想要运行GPU环境的话，那么必须在启动容器时加上<code>--runtime=nvidia</code>,那么此时的命令为：</p>
+<p><code>docker run --runtime=nvidia -it -p 12622:22 -v ~/data:/data -v ~/config:/config deepo-ssh:1.0 /bin/bash &amp;&amp; /usr/sbin/sshd -D</code></p>
 <ul>
-<li><code>live2d-widget-model-chitose</code></li>
-<li><code>live2d-widget-model-epsilon2_1</code></li>
-<li><code>live2d-widget-model-gf</code></li>
-<li><code>live2d-widget-model-haru/01</code> (use <code>npm install --save live2d-widget-model-haru</code>)</li>
-<li><code>live2d-widget-model-haru/02</code> (use <code>npm install --save live2d-widget-model-haru</code>)</li>
-<li><code>live2d-widget-model-haruto</code></li>
-<li><code>live2d-widget-model-hibiki</code></li>
-<li><code>live2d-widget-model-hijiki</code></li>
-<li><code>live2d-widget-model-izumi</code></li>
-<li><code>live2d-widget-model-koharu</code></li>
-<li><code>live2d-widget-model-miku</code></li>
-<li><code>live2d-widget-model-ni-j</code></li>
-<li><code>live2d-widget-model-nico</code></li>
-<li><code>live2d-widget-model-nietzsche</code></li>
-<li><code>live2d-widget-model-nipsilon</code></li>
-<li><code>live2d-widget-model-nito</code></li>
-<li><code>live2d-widget-model-shizuku</code></li>
-<li><code>live2d-widget-model-tororo</code></li>
-<li><code>live2d-widget-model-tsumiki</code></li>
-<li><code>live2d-widget-model-unitychan</code></li>
-<li><code>live2d-widget-model-wanko</code></li>
-<li><code>live2d-widget-model-z16</code></li>
+<li>-d | 后台运行</li>
+<li>-p 12622:22 | 绑定当前mac的12622端口到deepo-ssh容器的22端口（ssh服务默认为22端口）</li>
+<li>-v <del>/data:/data | 将本机上的</del>/data目录挂载到容器/data目录</li>
+<li>/usr/sbin/sshd -D | 容器运行的命令和参数，开启ssh服务 </li>
 </ul>
-<p>比如我这里选择了<code> hibiki</code>,那么安装命令如下：</p>
-<p>使用使用<code>npm install &#123;packagename&#125;</code>安装模型</p>
-<pre><code class="shell">npm install live2d-widget-model-hibiki</code></pre>
+<p>这样就可以通过<code>ssh -p 12622 root@localhost</code>连接到容器，可以进入python解释程序，执行<code>import torch</code>等命令查看机器学习框架是否能正常使用。在<code>exit</code>退出ssh连接后，容器仍运行在后台。</p>
+<h2 id="ssh远程连接"><a href="#ssh远程连接" class="headerlink" title="ssh远程连接"></a>ssh远程连接</h2><p>首先明确的是容器中的22端口已经绑定到主机上的12622端口，那么此时如果想要远程连接的话那么应该采用如下命令：</p>
+<pre><code class="shell">ssh -p 12622 root@&lt;你的主机的ip地址&gt;</code></pre>
+<p>这里有个坑注意。如果你的服务器主机是内网的，要想正确访问的话，那么必须首先搭建隧道。可以参考我之前的博客文章，</p>
+<ol>
+<li>其中这里的坑就是<code>我用autossh搭建隧道不起作用，无法远程登录进行容器里面，但是使用ssh搭建的就可以正确访问</code></li>
+</ol>
+<p>其中ssh的命令为：<code>ssh -fCNR 2064:localhost:12622 &lt;公网机器上用来做转发的账户&gt;@&lt;你的公网机器的ip地址&gt;</code></p>
+<p>具体的参数含义可以参考上面给出的文章链接。</p>
+<p>这样就将公网机器上的<code>2064</code>端口给绑定到你的内网机器的12622端口上了（假定你的服务器是在内网的，这样通过反向代理就可以通过外网进行访问了），即通过ssh就可以进行远程登录容器了：</p>
+<pre><code class="shell">ssh -p 2064 root@&lt;你的公网主机的ip地址&gt;</code></pre>
+<ol start="2">
+<li>第二个坑就是ssh连接时的root的账户密码你是不知道的，因为如果像上面启动容器后你没有修改设置密码，你是不知道root的密码的，所以你需要在启动容器后再重新设置一下密码，这样ssh连接的时候才能正确登录。</li>
+</ol>
+<h2 id="基于之前的镜像重新编写Dockerfile，设置容器启动时的密码"><a href="#基于之前的镜像重新编写Dockerfile，设置容器启动时的密码" class="headerlink" title="基于之前的镜像重新编写Dockerfile，设置容器启动时的密码"></a>基于之前的镜像重新编写Dockerfile，设置容器启动时的密码</h2><ol>
+<li><p>首先编写Dockerfile，由于之前已经提交过一次镜像，我们可以基于之前的镜像进行重新的构建一个新的镜像，这样设置里面的root的账户密码为自定义密码。在一个空目录下，创建Dockerfile文件，然后添加如下内容：</p>
+<pre><code class="shell">FROM deepo-ssh:1.0
+RUN echo &quot;root:123456&quot; | chpasswd</code></pre>
+<ul>
+<li>deepo-ssh:1.0 是之前生成的镜像</li>
+<li>echo “root:123456” | chpasswd 是将root的账户密码默认设置为123456了（这里密码你可以自行设置）</li>
+</ul>
 </li>
-<li><p>这里网上说的是去主题下的<code>_config.yml</code>或者hexo主目录下的<code>_config.yml</code>进行配置，但是我的博客在主题下的<code>_config.yml</code>这样配置后并没有生效，所以我在hexo博客的主目录下的<code>_config.yml</code>文件中进行了如下配置，就可以生效了，将默认的替换成了我自己选择的。</p>
-<pre><code class="typescript"># Live2D
-## https://github.com/EYHN/hexo-helper-live2d
-## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
-live2d:
-  enable: true
-  #enable: false
-  scriptFrom: local # 默认
-  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
-  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
-  pluginModelPath: assets/ # 模型文件相对与插件根目录路径
-  # scriptFrom: jsdelivr # jsdelivr CDN
-  # scriptFrom: unpkg # unpkg CDN
-  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
-  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
-  debug: false # 调试, 是否在控制台输出日志
-  model:
-    use: live2d-widget-model-hibiki
-    # use: live2d-widget-model-wanko # npm-module package name
-    # use: wanko # 博客根目录/live2d_models/ 下的目录名
-    # use: ./wives/wanko # 相对于博客根目录的路径
-    # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
-  display:
-    position: left
-    width: 145
-    height: 315
-  mobile:
-    show: true # 是否在移动设备上显示
-    scale: 0.5 # 移动设备上的缩放       
-  react:
-    opacityDefault: 0.7
-    opacityOnHover: 0.8</code></pre>
+<li><p>然后再次构建镜像，在Dockerfile文件所在的目录执行如下命令：</p>
+<pre><code class="shell">docker build -t deepo-ssh:2.0 .</code></pre>
+<p>这样就创建了deepo-ssh:2.0的镜像，然后基于这个镜像启动容器root账户默认的密码既是你自己设置的了。</p>
+</li>
+<li><p>启动容器</p>
+<p><code>docker run -it -p 12622:22 -v ~/data:/data -v ~/config:/config deepo-ssh:2.0 /bin/bash &amp;&amp; /usr/sbin/sshd -D </code></p>
+<p>注意这里是<strong>deepo-ssh:2.0</strong></p>
+<p>如果ssh连接不上容器 ，那么在容器中 重启一下ssh服务</p>
+<pre><code class="shell">/etc/init.d/ssh restart</code></pre>
 </li>
 </ol>
-<h2 id="3-参考文章"><a href="#3-参考文章" class="headerlink" title="3.参考文章"></a>3.参考文章</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://joeybling.github.io/2019/05/05/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0helper-live2d%E5%8A%A8%E6%80%81%E6%A8%A1%E5%9E%8B%E6%8F%92%E4%BB%B6/">Hexo博客添加helper-live2d动态模型插件</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">live2d的GitHub文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://huaji8.top/post/live2d-plugin-2.0/">hexo live2d插件 2.0 !</a></li>
+<h1 id="PyCharm连接Docker"><a href="#PyCharm连接Docker" class="headerlink" title="PyCharm连接Docker"></a>PyCharm连接Docker</h1><p>     经过以上的操作，可以理解成本地12622端口开启了ssh服务，运行一个独立的ubuntu服务器。接下来介绍如何使用PyCharm调用Docker容器中的解释器。（注意需要PyCharm专业版）<br>   在Pycharm中file–&gt;settings–&gt;Project Interpreter，如下图所示：</p>
+<p>​    然后点击Add进行添加python解释器</p>
+<ul>
+<li><img src="https://gitee.com/LuWangLin/picBed_new/raw/master/img/image-20200818111853045.png" alt="image-20200818111853045"></li>
 </ul>
+<p>然后选择你已经配置好的ssh连接，进行配置python解释器：</p>
+<ul>
+<li><img src="https://gitee.com/LuWangLin/picBed_new/raw/master/img/image-20200818112043431.png" alt="image-20200818112043431"></li>
+</ul>
+<p>接下里选择解释器，这里一定注意interpreter的地方，要选择正确；然后配置同步目录（即你的本地项目会同步到容器中的哪个目录）</p>
+<ul>
+<li><img src="https://gitee.com/LuWangLin/picBed_new/raw/master/img/image-20200818112414875.png" alt="image-20200818112414875"></li>
+</ul>
+<p>点击finish就配置完成了，接下来就可以进行本地开发，远程运行在容器里了。</p>
+<p><code>注意这里的同步目录最好是之前设置的启动容器时挂载的目录,即最好在/data下</code>，这样容器销毁了数据也不会丢失</p>
+<p>在服务器上创建docker容器并运行在后台，映射到服务器的一个端口。在Pycharm中调用远程服务器的解释器，并创建本地目录和服务器目录的映射（在Deployment配置），就可以实现在本地写代码和调试。</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>如果发现ssh连接不上，那么可以在容器内进行重启下ssh服务</p>
+<pre><code class="shell">/etc/init.d/ssh restart</code></pre>
 
             </div>
             <hr/>
@@ -632,7 +608,7 @@ live2d:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://luwanglin.gitee.io/2020/08/13/hexo%E6%B7%BB%E5%8A%A0live2d-%E8%AE%A9%E4%BD%A0%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%88%B1%E7%9A%84girlfriend/">https://luwanglin.gitee.io/2020/08/13/hexo%E6%B7%BB%E5%8A%A0live2d-%E8%AE%A9%E4%BD%A0%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%88%B1%E7%9A%84girlfriend/</a>
+                    <a href="https://luwanglin.gitee.io/2020/08/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%9C%E7%A8%8Bdocker%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83/">https://luwanglin.gitee.io/2020/08/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%9C%E7%A8%8Bdocker%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -670,8 +646,12 @@ live2d:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/live2D/">
-                                    <span class="chip bg-color">live2D</span>
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
+                                </a>
+                            
+                                <a href="/tags/pycharm/">
+                                    <span class="chip bg-color">pycharm</span>
                                 </a>
                             
                         </div>
@@ -1102,54 +1082,54 @@ live2d:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/16/boostrap%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E5%B8%83%E5%B1%80/">
+                <a href="/2020/08/18/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%9C%E7%A8%8Bdocker%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="boostrap栅格系统自适应的布局">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="服务器搭建远程docker深度学习环境">
                         
-                        <span class="card-title">boostrap栅格系统自适应的布局</span>
+                        <span class="card-title">服务器搭建远程docker深度学习环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.栅格系统​        Bootstrap是基于移动优先的原则开发的，使用了一系列的媒体查询（media queries）方法，为我们的布局和界面创建自适应的的分界点。这些分界点主要是基于视口宽度的最小值，并且当窗口视图改变的时候允许
+                            服务器搭建远程docker深度学习环境本文大部分内容参考知乎文章
+Docker+PyCharm快速搭建机器学习开发环境
+Docker  Docker是一种容器技术，类似于虚拟机，但比虚拟机更轻便。Docker容器内的应用程序直接运行于宿主的
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/Bootstrap/" class="post-category">
-                                    Bootstrap
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    深度学习环境配置
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">栅格系统</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
-                    <a href="/tags/%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/">
-                        <span class="chip bg-color">混合布局</span>
+                    <a href="/tags/pycharm/">
+                        <span class="chip bg-color">pycharm</span>
                     </a>
                     
                 </div>
@@ -1163,34 +1143,36 @@ live2d:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/13/hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E8%BD%AC%E8%BD%BD/">
+                <a href="/2020/08/16/PicGo%E8%BD%AF%E4%BB%B6%E6%90%AD%E9%85%8Dgitee%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="hexo博客优化(转载)">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="PicGo软件搭配gitee实现图床">
                         
-                        <span class="card-title">hexo博客优化(转载)</span>
+                        <span class="card-title">PicGo软件搭配gitee实现图床</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            安装hexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-前提安装 Hexo 相当简单，只需要先安装下列应用程序即可：
+                            1.安装PicGo软件，并配置gitee1.1安装picGo
+picGo
+安装gitee-uploader 插件
 
-Node.js 
+官网下载地址如下：最新版本
+可以自行选择版本进行下载，这里我选择了最新的版本进行下载安装，由于我有梯子下载比较快，如果下载慢
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    hexo博客配置
+                            <a href="/categories/%E6%92%B0%E5%86%99%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    撰写博客
                                 </a>
                             
                             
@@ -1200,8 +1182,12 @@ Node.js
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">matery主题优化</span>
+                    <a href="/tags/picGo/">
+                        <span class="chip bg-color">picGo</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%81%E4%BA%91/">
+                        <span class="chip bg-color">码云</span>
                     </a>
                     
                 </div>
